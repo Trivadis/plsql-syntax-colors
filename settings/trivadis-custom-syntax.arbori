@@ -1,0 +1,32 @@
+/**
+ * The list of syntax highlighting rules:
+   https://vadimtropashko.wordpress.com/2018/10/10/custom-syntax-coloring/
+ * In-depth description of the Arbori language:
+   https://vadimtropashko.wordpress.com/2017/02/11/arbori-the-missing-manuals/  
+**/
+ 
+/**
+ * Highlighting all the column and table aliases
+ * https://stackoverflow.com/questions/49193403/how-to-customize-syntax-highlight-in-pl-sql-developer-to-mark-aliases 
+ */
+PlSqlColTabAlases:                          -- 
+   [node) c_alias                           -- Search all the nodes in the parse tree which are column aliases
+ | [node) identifier                        -- Or nodes with identifier payload,  
+        & [node-1) query_table_expression   -- which younger siblings are labeled with table names
+->                                          -- The semantic action symbol (to trigger syntax highlighting).
+;                                           -- End of the rule
+
+
+/**
+ * Highlighting rule for DBMS_OUTPUT, APEX_DEBUG, and logger API:
+ * https://apex.oracle.com/pls/apex/f?p=43135:7:::NO:RP,7:P7_ID:44501
+ */  
+PlSqlLogger:
+    [pkg) name
+  & (?pkg = 'DBMS_OUTPUT' | ?pkg = 'APEX_DEBUG' |
+     ?pkg = 'LOG'         | ?pkg = 'logger'     -- pattern match is case insensitive
+  )   
+  & (pkg^ = node | pkg^^ = node)
+  & [node) procedure_call
+->
+;
