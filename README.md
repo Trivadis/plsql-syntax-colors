@@ -17,12 +17,18 @@ The Arbori program works with any color schema.
 1. Clone this repository or download the ZIP file and extract it. 
 2. Start SQL Developer
 3. Open `Preferences`
-3. Select `Code Editor` -> `PL/SQL Syntax Colors` -> `PL/SQL Custom Syntax Rules`
-4. Press `Import...`
+4. Select `Code Editor` -> `PL/SQL Syntax Colors` -> `PL/SQL Custom Syntax Rules`
+5. Press `Import...`
    ![PL/SQL Custom Syntax Rules](images/plsql-custom-syntax-rules.png)
-5. Select [`trivadis-custom-syntax.arbori`](settings/trivadis-custom-syntax.arbori)
-6. Press `Open`
-7. Press `OK` to save the settings
+6. Select [`trivadis-custom-syntax.arbori`](settings/trivadis-custom-syntax.arbori)
+7. Press `Open`
+8. Press `OK` to save the settings
+9. Restart SQL Developer
+10. Open `Preferences`
+11. Select `Code Editor` -> `PL/SQL Syntax Colors`
+12. Select Style `Hint` and change color settings
+13. Press `OK` to save the settings
+
 
 # Issues
 Please file your bug reports, enhancement requests, questions and other support requests within [Github's issue tracker](https://help.github.com/articles/about-issues/).
