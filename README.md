@@ -6,11 +6,14 @@ This repository provides settings for syntax highlighting of PL/SQL & SQL code i
 
 The alternative Arbori program improves the settings as follows:
 
-- Keywords used as identifiers are highlighted as identifiers.
-- Logging calls consider also fully qualified statements are and the final semicolon.
+- Handle keywords used as identifiers.
+- Consider fully qualified logging calls including final semicolon.
 - Distinguish between comments and optimizer hints.
 
-The Arbori program works with any color schema.
+![Example](images/before-after-example.png)
+
+
+The Arbori program works with any color scheme.
 
 ## Installation
 
@@ -28,7 +31,6 @@ The Arbori program works with any color schema.
 11. Select `Code Editor` -> `PL/SQL Syntax Colors`
 12. Select Style `Hint` and change color settings
 13. Press `OK` to save the settings
-
 
 # Issues
 Please file your bug reports, enhancement requests, questions and other support requests within [Github's issue tracker](https://help.github.com/articles/about-issues/).
