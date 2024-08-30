@@ -1,3 +1,7 @@
+# Discontinuation Notice
+
+@PhilippSalvisberg no longer work for Trivadis - Part of Accenture and no one at Trivadis/Accenture will continue this project. Therefore, this GitHub repository was archived on 30 August 2024.
+
 # PL/SQL Syntax Colors for SQL Developer
 
 ## Introduction
@@ -17,7 +21,7 @@ The Arbori program works with any color scheme.
 
 ## Installation
 
-1. Clone this repository or download the ZIP file and extract it. 
+1. Clone this repository or download the ZIP file and extract it.
 2. Start SQL Developer
 3. Open `Preferences`
 4. Select `Code Editor` -> `PL/SQL Syntax Colors` -> `PL/SQL Custom Syntax Rules`
